@@ -1,0 +1,23 @@
+{
+  "name": "compress",
+  "version": "0.0.1",
+  "description": "compress-electron",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuxsen/compress.git"
+  },
+  "author": "liuxsen <948771968@qq.com> (http://github.com/liuxsen)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liuxsen/compress/issues"
+  },
+  "homepage": "https://github.com/liuxsen/compress#readme",
+  "dependencies": {
+    "conventional-changelog-cli": "^2.0.31"
+  }
+}
