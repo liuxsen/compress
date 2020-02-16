@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add .",
-    "bundle": "electron-builder --mac --win --ia32",
+    "release": "electron-builder --mac --win --ia32",
     "dist": "electron-builder --mac",
     "start": "electron ."
   },
