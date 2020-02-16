@@ -25,6 +25,6 @@ cache:
 script:
   - npm run dist
 
-branches:
-  only:
-    - master
+# branches:
+#   only:
+#     - master
