@@ -1,6 +1,6 @@
 {
   "name": "compress",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "compress-electron",
   "main": "./src/main/index.js",
   "scripts": {
