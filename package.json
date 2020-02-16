@@ -2,10 +2,12 @@
   "name": "compress",
   "version": "0.0.1",
   "description": "compress-electron",
-  "main": "index.js",
+  "main": "./src/main/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add ."
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add .",
+    "bundle": "electron-builder --mac --win --ia32",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,27 @@
   },
   "homepage": "https://github.com/liuxsen/compress#readme",
   "dependencies": {
-    "conventional-changelog-cli": "^2.0.31"
+  },
+  "devDependencies": {
+    "electron": "^5.0.6",
+    "conventional-changelog-cli": "^2.0.31",
+    "electron-builder": "^22.2.0",
+    "electron-devtools-installer": "^2.2.4"
+  },
+  "build": {
+    "appId": "liuxsen.id",
+    "mac": {
+      "category": "your.app.category.type",
+      "target": "dmg",
+      "icon": "assets/icons/fiddle.icns"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icons/fiddle.ico"
+    },
+    "directories": {
+      "buildResources": ".",
+      "output": "outApp"
+    }
   }
 }
