@@ -1,3 +1,18 @@
 language: node_js
 node_js:
   - 10
+matrix:
+  include:
+  - os: linux
+    dist: xenial
+    sudo: required
+  - os: osx
+notifications:
+  email: false
+before_script:
+  - npm install
+script:
+  - npm run bundle
+deploy:
+  provider: releases
+  file: "outApp"
