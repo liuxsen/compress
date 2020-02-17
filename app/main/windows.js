@@ -4,7 +4,7 @@ const path = require('path');
 let browserWindows = [];
 
 // 获取新建主窗口参数
-const getMainWindowOptions = (width=1000, height= 670) => {
+const getMainWindowOptions = (width=800, height= 600) => {
   return {
     width,
     height,
@@ -20,11 +20,11 @@ const getMainWindowOptions = (width=1000, height= 670) => {
 const createMainWindow = (width, height, hash = '') => {
   console.log(`Creating main window`);
   const browserWindow = new BrowserWindow(getMainWindowOptions(width, height));
-  // if(isDevMode()){
-    // browserWindow.loadURL(`http://localhost:4001/#${hash}`);
-  // }else{
+  if(isDevMode()){
+    browserWindow.loadURL(`http://localhost:4001/#${hash}`);
+  }else{
     browserWindow.loadFile(path.join(__dirname, `../../dist/index.html`));
-  // }
+  }
   browserWindow.webContents.once('dom-ready', ()=>{
     browserWindow.show();
   });
