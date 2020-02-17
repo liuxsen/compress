@@ -25,6 +25,9 @@ cache:
 script:
   - npm run dist
 
+deploy:
+  provider: releases
+  skip_cleanup: true
 # branches:
 #   only:
 #     - master
