@@ -26,7 +26,8 @@ script:
   - npm run dist
 
 deploy:
-  provider: npm
+  provider: releases
+  skip_cleanup: true
 # branches:
 #   only:
 #     - master
