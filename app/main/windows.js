@@ -4,7 +4,7 @@ const path = require('path');
 let browserWindows = [];
 
 // 获取新建主窗口参数
-const getMainWindowOptions = (width=800, height= 600) => {
+const getMainWindowOptions = (width=550, height= 310) => {
   return {
     width,
     height,
