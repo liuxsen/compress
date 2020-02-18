@@ -59,8 +59,22 @@ const Main = () => {
     };
   });
   return <div>
-    <input multiple type="file" onChange={handleChangeFile} />
-    <div ref={dropRef} className="box">拖放压缩</div>
+    <div ref={dropRef} className="box">
+      <div className="panada">
+        <img src={__static+'/images/panda.png'} />
+      </div>
+      <div className="grass">
+        <img src={__static+'/images/grass.png'} />
+      </div>
+      <div className="bamboo">
+        <img src={__static+'/images/bamboo.png'} />
+      </div>
+      <div className="tip">
+        <img src={__static+'/images/download.png'} />
+        <p>Drop your .png or .jpg files here!</p>
+      </div>
+      <input className="upload" multiple type="file" onChange={handleChangeFile} />
+    </div>
   </div>;
 };
 

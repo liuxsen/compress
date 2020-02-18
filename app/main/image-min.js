@@ -43,6 +43,9 @@ const fsStat = (path) => {
 
 const miniImage = async (input) => {
   const output = await dialog.showSaveDialog();
+  if(!output){
+    return;
+  }
   for (let index = 0; index < input.length; index++) {
     const element = input[index];
     console.log(element.path);
